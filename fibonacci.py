@@ -6,5 +6,12 @@ class fibonacci_solution():
         for n in range(0, length+1):
             (self.ans).append(self.ans[-1] + self.ans[-2])
 
-fibonacci = fibonacci_solution(5)
+given_length = input('Length: ')
+
+try:
+    int(given_length)
+except:
+    print('Error! Length must be number')
+
+fibonacci = fibonacci_solution(given_length)
 print(fibonacci.ans)
